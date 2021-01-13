@@ -15,6 +15,22 @@ vnoremap <space> zf
 set cindent
 
 
-autocmd BufNewFile  *.c     0r ~/.vim/template/skeleton.c
-autocmd BufNewFile  *.sh    0r ~/.vim/template/skeleton.sh
-autocmd BufNewFile  *.py    0r ~/.vim/template/skeleton.py
+
+function AddTemplate(tmpl_file)
+    exe "0read " . a:tmpl_file
+    let substDict = {}
+    let substDict["name"] = $USER
+    let substDict["date"] = strftime("%Y %b %d %X")
+    exe '%s/<<\([^>]*\)>>/\=substDict[submatch(1)]/g'
+    set nomodified
+    normal G
+endfunction
+
+autocmd BufNewFile *.c  call AddTemplate("~/.vim/template/skeleton.c")
+autocmd BufNewFile *.sh call AddTemplate("~/.vim/template/skeleton.sh")
+autocmd BufNewFile *.py call AddTemplate("~/.vim/template/skeleton.py")
+
+
+
+
+
