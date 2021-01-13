@@ -92,6 +92,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -117,10 +118,19 @@ if ! shopt -oq posix; then
 fi
 
 alias lr='ls -ltrh'
+alias ld='ls -lhrtd */'
+alias hg='history | grep'
 alias c='clear'
-alias gcc='gcc -g -O3 -Wall'
 alias vi='vim'
+alias gcc='gcc -g -O3 -Wall'
 alias tor='(cd ~/.tor && ./tor_browser)'
+
+# alias for directory stack
+alias j='cd -'
+alias pd='pushd'
+alias p='pushd +1 > /dev/null'
+alias st='dirs -v'
+
 LD_LIBRARY_PATH=/home/samhaug/gsl/lib
 export LD_LIBRARY_PATH
 
