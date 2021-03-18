@@ -13,9 +13,9 @@ echo ""
       echo "making ./vim/template"
       mkdir ./vim/template
    fi
-   ln -vfrs ./vim/vimrc $HOME/.vimrc
+   ln -vfs ./vim/vimrc $HOME/.vimrc
    for i in $(ls ./vim/skeleton* | awk -F"/" '{print $NF}') ; do 
-      ln -vfrs ./vim/$i $HOME/.vim/template/$i
+      ln -vfs ./vim/$i $HOME/.vim/template/$i
    done
    
    if [ $? != 0 ]; then
@@ -27,7 +27,7 @@ echo "######################################"
 echo ""
 
    echo "Linking bashrc"
-   ln -vfrs ./bash/bashrc $HOME/.bashrc
+   ln -vfs ./bash/bashrc $HOME/.bashrc
    source $HOME/.bashrc
    
    if [ $? != 0 ]; then
@@ -39,7 +39,7 @@ echo "######################################"
 echo ""
 
    echo "Linking ipython startup"
-   ln -vfrs ipython/startup.py $HOME/.ipython/profile_default/startup/startup.py
+   ln -vfs ipython/startup.py $HOME/.ipython/profile_default/startup/startup.py
    
    if [ $? != 0 ]; then
       echo "WARNING: something wrong with ipython default"
