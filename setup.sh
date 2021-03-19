@@ -37,8 +37,13 @@ echo "######################################"
 echo ""
 
    echo "Linking bashrc"
-   ln -vfs $cwd/bash/bashrc $HOME/.bashrc
-   source $HOME/.bashrc
+   if [ $(uname -a | awk '{print $1}') == 'Darwin' ]; then
+      ln -vfs $cwd/bash/bashrc $HOME/.bash_profile
+      source $HOME/.bash_profile
+   else
+      ln -vfs $cwd/bash/bashrc $HOME/.bashrc
+      source $HOME/.bashrc
+   fi
    
    if [ $? != 0 ]; then
       echo "WARNING: something wrong with bashrc"

@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias lr='ls -ltrh'
+alias lr='ls -otrh'
 alias ld='ls -lhrtd */'
 alias hg='history | grep'
 alias c='clear'
