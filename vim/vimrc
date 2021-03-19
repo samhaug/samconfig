@@ -1,3 +1,4 @@
+syntax on
 set number
 set cursorline
 set cursorcolumn
@@ -8,6 +9,7 @@ set expandtab
 set shiftwidth=2 
 set smartindent  
 set cindent     
+set number
 
 set foldmethod=indent
 nnoremap <space> za
