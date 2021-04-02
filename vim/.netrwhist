@@ -1,4 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/samhaug/src'
-let g:netrw_dirhist_2='/Users/samhaug/src/vim-airline'
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/samhaug/.ipython/profile_default/startup'
+let g:netrw_dirhist_1='/home/samhaug/src/samconfig/ipython'

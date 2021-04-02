@@ -87,10 +87,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -117,6 +113,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias lr='ls -otrh'
 alias ld='ls -lhrtd */'
 alias hg='history | grep'
@@ -135,10 +135,9 @@ LD_LIBRARY_PATH=/home/samhaug/gsl/lib
 export LD_LIBRARY_PATH
 
 # added by Anaconda3 installer
-# export PATH="/home/samhaug/anaconda3/bin:$PATH"  # commented out by conda initialize
 export PATH="/home/samhaug/bin:$PATH"
 #export PATH="/home/samhaug/TauP-2.4.5/bin:$PATH"
-export PATH="/home/samhaug/TauP-2.4.6-SNAPSHOT/bin:$PATH"
+#export PATH="/home/samhaug/TauP-2.4.6-SNAPSHOT/bin:$PATH"
 export PATH="/home/samhaug/src/ivpn-openvpn-config/bin:$PATH"
 export PATH="/home/samhaug/:$PATH"
 
