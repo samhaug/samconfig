@@ -131,13 +131,13 @@ alias pd='pushd'
 alias p='pushd +1 > /dev/null'
 alias st='dirs -v'
 
+# alias to launch tor browser
+alias tor='(cd /home/samhaug/src/tor-browser_en-US && ./start-tor-browser.desktop)'
 LD_LIBRARY_PATH=/home/samhaug/gsl/lib
 export LD_LIBRARY_PATH
 
 # added by Anaconda3 installer
 export PATH="/home/samhaug/bin:$PATH"
-#export PATH="/home/samhaug/TauP-2.4.5/bin:$PATH"
-#export PATH="/home/samhaug/TauP-2.4.6-SNAPSHOT/bin:$PATH"
 export PATH="/home/samhaug/src/ivpn-openvpn-config/bin:$PATH"
 export PATH="/home/samhaug/:$PATH"
 
